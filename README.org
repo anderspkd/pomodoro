@@ -1,0 +1,40 @@
+#+TITLE: Pomodoro study technique utility.
+
+See [[https://en.wikipedia.org/wiki/Pomodoro_Technique][this Wikipedia article for a description of the technique.]]
+
+Requires ~notify-send~ to be installed. Written in Python 3.
+
+** Running
+
+   #+BEGIN_EXAMPLE
+$ pomodoro --help
+usage: pomodoro [-h] [-m message] [-t time] [-u unit]
+                [--notify-time NOTIFY_TIME] [--config CONFIG]
+
+Pomodoro technique utility.
+
+If run without any arguments, it uses settings present in config file
+from /home/a/.config/pom.conf.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -m message            message to show in notifcation
+  -t time               interval time
+  -u unit               time unit
+  --notify-time NOTIFY_TIME
+                        time notification is visible
+  --config CONFIG       config file
+   #+END_EXAMPLE
+
+** Config file example
+
+   By default, ~pom~ searches for a JSON formatted file at
+   ~$HOME/.config/pom.conf~. An example of such a file is provided below.
+
+   #+BEGIN_EXAMPLE
+$ cat ~/.config/pom.conf 
+{"time": 25, "unit": "m", "message": "ding!"}
+   #+END_EXAMPLE
+   
+   The meaning of this, is that the interval is 25 minutes; and at the end of
+   the 25 minutes, ~notify-send~ is invoked to display the message "ding!".
