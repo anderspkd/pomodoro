@@ -12,7 +12,7 @@ desc = ('Pomodoro technique utility.'
         '\n\n'
         'If run without any arguments, it uses settings present in config file'
         '\n'
-        f'from {CONF_FILE}.')
+        'from $HOME/.config/pom.conf.')
 
 p = argparse.ArgumentParser(description=desc, formatter_class=argparse.RawTextHelpFormatter)
 p.add_argument('-m', help='message to show in notifcation',

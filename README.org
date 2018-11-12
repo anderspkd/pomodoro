@@ -14,7 +14,7 @@ usage: pomodoro [-h] [-m message] [-t time] [-u unit]
 Pomodoro technique utility.
 
 If run without any arguments, it uses settings present in config file
-from /home/a/.config/pom.conf.
+from $HOME/.config/pom.conf.
 
 optional arguments:
   -h, --help            show this help message and exit
