@@ -96,10 +96,9 @@ while True:
         # remaining time
         t = int(t - (time.time() - stime))
         stime = time.time()
-        y = input('stop(s), continue(c)? ')
-        if y == 's':
+        y = input('stop(q)?, or Enter to continue... ')
+        if y == 'q':
             exit(0)
-        elif y == 'c':
-            print(f'{t//m} {u} remaining ...')
+        print(f'{t//m} {u} remaining ...')
 
 notify(args.m, t=args.notify_time)
