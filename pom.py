@@ -46,7 +46,7 @@ def run(interval, msg, input_handler):
     obj = {'remainingtime': parse_time(interval), 'paused': False,
            'bail': False}
 
-    _ = input_handler(obj)
+    input_handler(obj)
 
     # we're done if `interval` time has elapsed or the user exited early.
     while not (obj['remainingtime'] <= 0 or obj['bail'] is True):
