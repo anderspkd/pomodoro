@@ -1,3 +1,6 @@
+# Copyright: Anders Dalskov, 2018
+# See LICENSE
+
 # various utility functions related for the most part to dealing with strings
 # that represent units of time.
 
