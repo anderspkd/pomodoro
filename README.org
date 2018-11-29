@@ -26,6 +26,5 @@ optional arguments:
 
    Python3 for sure.
 
-   If ~notify-send~ exists on the system, then that is used to show a
-   notification when the timer is out. Otherwise this message is just printed
-   after in the terminal.
+   Uses ~notify-send~ if available. Otherwise the a message is printed in the
+   terminal when the timer runs out.
