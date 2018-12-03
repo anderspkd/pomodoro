@@ -36,10 +36,11 @@ class Cli():
             i = input()
             if i == 'p':
                 self.show_remaining_time()
-                print('Press any key to unpause ...')
+                print('PAUSED. Press any key to unpause ...')
                 self.obj['paused'] = True
                 input()
                 self.obj['paused'] = False
+                print('Resuming ...')
             if i == '':
                 self.show_remaining_time()
             if i == 'q':
