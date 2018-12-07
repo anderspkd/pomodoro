@@ -6,7 +6,6 @@
 import argparse
 import time
 
-from pom.cli import Cli
 from pom.notify import notify_user_done
 from pom.util import parse_time
 
@@ -29,6 +28,10 @@ parser.add_argument('--message',
 parser.add_argument('--interval',
                     help='interval time',
                     default='25m'
+)
+parser.add_argument('--gui',
+                    help='use a graphical interface',
+                    action='store_true',
 )
 args = parser.parse_args()
 
@@ -66,4 +69,9 @@ def run(interval, msg, input_handler):
 
 
 if __name__ == '__main__':
-    run(args.interval, args.message, Cli)
+    if args.gui:
+        from pom.gui import PomGUI
+        run(args.interval, args.message, PomGUI)
+    else:
+        from pom.cli import Cli
+        run(args.interval, args.message, Cli)
